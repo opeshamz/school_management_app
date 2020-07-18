@@ -29,14 +29,14 @@ if($rows==1){
  $_SESSION['surname']=$data['surname'];
  $_SESSION['first_name']=$data['first_name'];
  $_SESSION['last_name']=$data['last_name'];
-$_SESSION['pictures']=$data['pictures'];
+ $_SESSION['pictures']=$data['pictures'];
  $_SESSION['token']=$data['token'].$data['student_id'];
  $_SESSION['login_status']=$data['login_status'];
  $_SESSION['email']=$data['email'];
  $_SESSION['student_code']=($data['student_code']);
 
  //redirect user
-header("location:studentpage.php?student=".$_SESSION['student_code']."&student_code=".$_SESSION['student_code']);
+header("location: studentpage.php");
 }
 if(empty($student_id) || empty($password)){
   header("location:artlogin.php?Empty=Please fill in the Blanks");

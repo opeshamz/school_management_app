@@ -1,5 +1,7 @@
 <?php
+
 require_once('artloginmodel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +14,7 @@ require_once('artloginmodel.php');
 </head>
 <body style="background-color:green">
 
- 
-    <?php
+<?php
     if(isset($_SESSION['student_id']) && $_SESSION['login_status']=1){
         header("location:studentpage.php?student=".$_SESSION['surname']."&student_code=".$_SESSION['student_code']);
     }
@@ -51,7 +52,7 @@ require_once('artloginmodel.php');
 
 
                 <div class="card-body">
-                  <form action="artloginmodel.php"  method="post">
+                  <form action="artloginmodel.php"  method="get">
                         <input type="text" class="form-control mb-3" id="email"  placeholder="Email/phone"name="userid">
                         <input type="password" class="form-control mb-3" id="password" placeholder="Password"name="password">
                         <button class="btn btn-primary mt-3" name="login">login</button>

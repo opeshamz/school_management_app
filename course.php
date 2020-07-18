@@ -24,7 +24,7 @@ error_reporting(0);
     <body>
         <?php
   if(!isset($_SESSION['student_id'])){
-    header("location:artlogin.php");
+    header("location: artlogin.php");
   } 
   else{
 
@@ -101,7 +101,7 @@ error_reporting(0);
               $count=mysqli_num_rows($selquary);
              
 	            if($count>0){
-			          echo "<h4 class='container regsuccess '> you have registered for first semester courses.</h4>";
+			          echo "<h4 class='container regsuccess'> you have registered for first semester courses.</h4>";
                }
 
               else{
